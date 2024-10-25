@@ -1,9 +1,13 @@
-CREATE TABLE technical_officer
+CREATE TABLE student
 (
-    to_id VARCHAR(15),
-    to_nic VARCHAR(15)  NOT NULL,
-     PRIMARY KEY(to_id),
-    FOREIGN KEY (to_nic) REFERENCES user(u_nic) ON DELETE CASCADE
+    student_id VARCHAR(15),
+    acedemic_year DATE NOT NULL, 
+    status VARCHAR(10) NOT NULL,
+    st_nic VARCHAR(15) NOT NULL,
+    gender CHAR(1),
+    dob DATE,
+     PRIMARY KEY(student_id),
+    FOREIGN KEY (st_nic) REFERENCES user(u_nic) ON DELETE CASCADE
 );
 
 CREATE TABLE student_course_unit
