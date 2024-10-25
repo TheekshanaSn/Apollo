@@ -1,13 +1,9 @@
-CREATE TABLE student
+CREATE TABLE technical_officer
 (
-    student_id VARCHAR(15),
-    acedemic_year DATE NOT NULL, 
-    status VARCHAR(10) NOT NULL,
-    st_nic VARCHAR(15) NOT NULL,
-    gender CHAR(1),
-    dob DATE,
-     PRIMARY KEY(student_id),
-    FOREIGN KEY (st_nic) REFERENCES user(u_nic) ON DELETE CASCADE
+    to_id VARCHAR(15),
+    to_nic VARCHAR(15)  NOT NULL,
+     PRIMARY KEY(to_id),
+    FOREIGN KEY (to_nic) REFERENCES user(u_nic) ON DELETE CASCADE
 );
 
 CREATE TABLE admin
@@ -21,6 +17,8 @@ CREATE TABLE admin
 CREATE TABLE marks
 (
     mark_id VARCHAR(15),
+    student_id VARCHAR(15) NOT NULL,
+    course_code VARCHAR(15) NOT NULL,
     eligibility VARCHAR(15) NOT NULL,
     Q1 INT CHECK (Q1 BETWEEN 0 AND 100), 
     Q2 INT CHECK (Q2 BETWEEN 0 AND 100),
@@ -31,8 +29,7 @@ CREATE TABLE marks
     final_exam_theory INT CHECK (final_exam_theory BETWEEN 0 AND 100),
     final_exam_practical INT CHECK (final_exam_practical BETWEEN 0 AND 100),
     grade CHAR(1),
-    student_id VARCHAR(15) NOT NULL,
-    course_code VARCHAR(15) NOT NULL,
+   
     PRIMARY KEY(mark_id),
     FOREIGN KEY (student_id) REFERENCES student(student_id) ON DELETE CASCADE,
     FOREIGN KEY (course_code) REFERENCES course_unit(course_code) ON DELETE CASCADE
