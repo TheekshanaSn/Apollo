@@ -5,6 +5,8 @@
     email VARCHAR(50) NOT NULL,
     f_name VARCHAR(20),
     l_name VARCHAR(20), 
+    /*ADD*/ address VARCHAR (50),
+   /*ADD*/ gender  CHAR(1),
     PRIMARY KEY(u_nic)
    
 );
@@ -22,7 +24,7 @@ CREATE TABLE attendance
 (
     attendance_id VARCHAR(15),
     type VARCHAR(10) NOT NULL,
-    eligibility VARCHAR(8) NOT NULL,
+   /*not now*/ eligibility VARCHAR(8) NOT NULL,
     date DATE NOT NULL,
     student_id VARCHAR(15) NOT NULL,
     to_id VARCHAR(15) NOT NULL,
