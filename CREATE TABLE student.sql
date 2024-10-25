@@ -16,10 +16,9 @@ CREATE TABLE admin
 
 CREATE TABLE marks
 (
-    mark_id VARCHAR(15),
+    
     student_id VARCHAR(15) NOT NULL,
     course_code VARCHAR(15) NOT NULL,
-    eligibility VARCHAR(15) NOT NULL,
     Q1 INT CHECK (Q1 BETWEEN 0 AND 100), 
     Q2 INT CHECK (Q2 BETWEEN 0 AND 100),
     Q3 INT CHECK (Q3 BETWEEN 0 AND 100),
@@ -28,9 +27,9 @@ CREATE TABLE marks
     mid_exam_practical INT CHECK (mid_exam_practical BETWEEN 0 AND 100),
     final_exam_theory INT CHECK (final_exam_theory BETWEEN 0 AND 100),
     final_exam_practical INT CHECK (final_exam_practical BETWEEN 0 AND 100),
-    grade CHAR(1),
+    
    
-    PRIMARY KEY(mark_id),
+    PRIMARY KEY(student_id,course_code),
     FOREIGN KEY (student_id) REFERENCES student(student_id) ON DELETE CASCADE,
     FOREIGN KEY (course_code) REFERENCES course_unit(course_code) ON DELETE CASCADE
 );
