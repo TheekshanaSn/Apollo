@@ -4,9 +4,9 @@ CREATE TABLE student
     acedemic_year DATE NOT NULL, 
     status VARCHAR(10) NOT NULL,
     st_nic VARCHAR(15) NOT NULL,
-    gender CHAR(1),
     dob DATE,
-     PRIMARY KEY(student_id),
+    department VARCHAR(10),
+    PRIMARY KEY(student_id),
     FOREIGN KEY (st_nic) REFERENCES user(u_nic) ON DELETE CASCADE
 );
 
