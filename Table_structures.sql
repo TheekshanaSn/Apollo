@@ -41,7 +41,7 @@ CREATE TABLE Attendance
     medical_status VARCHAR(15),
     session_no INT NOT NULL,
     at_to_id VARCHAR(15),
-    PRIMARY KEY(at_student_id,at_course_code),
+    PRIMARY KEY(attendance_id),
     FOREIGN KEY (at_student_id) REFERENCES student(student_id) ON DELETE CASCADE,
     FOREIGN KEY (at_course_code,at_course_type) REFERENCES course_unit(course_code,type) ON DELETE CASCADE,
     FOREIGN KEY (at_to_id) REFERENCES technical_officer(to_id) ON DELETE CASCADE
