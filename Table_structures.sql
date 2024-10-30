@@ -1,4 +1,5 @@
 
+
  CREATE TABLE User
 (
     u_nic VARCHAR(15),
@@ -34,7 +35,7 @@ CREATE TABLE Attendance
     attendance_id VARCHAR(15),
     at_student_id VARCHAR(15),
     at_course_code VARCHAR(15),
-    at_course_type(T/P) VARCHAR(10),
+    at_course_type VARCHAR(10),
     date DATE,
     attendence VARCHAR(20),
     medical_status VARCHAR(15),

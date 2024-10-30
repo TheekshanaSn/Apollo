@@ -141,7 +141,7 @@ VALUES
     
     
 
-INSERT INTO attendance(attendance_id,at_student_id,at_course_code,at_course_type(T/P),date,attendence,medical_status,session_no,at_to_id)
+INSERT INTO attendance(attendance_id,at_student_id,at_course_code,at_course_type,date,attendence,medical_status,session_no,at_to_id)
 VALUES
 
 -- TG1376
