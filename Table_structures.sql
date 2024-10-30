@@ -1,5 +1,5 @@
 
- CREATE TABLE user
+ CREATE TABLE User
 (
     u_nic VARCHAR(15),
     email VARCHAR(50) NOT NULL,
@@ -20,22 +20,35 @@ CREATE TABLE user_phone
     
 );
 
-CREATE TABLE attendance
+
+CREATE TABLE Medical(
+     medical_id  VARCHAR(15),
+     med_student_id VARCHAR(15),
+     date DATE,
+     PRIMARY KEY(medical_id),
+     FOREIGN KEY(med_student_id) REFERENCES student(student_id) ON DELETE CASCADE
+);
+
+CREATE TABLE Attendance
 (
-    -- attendance_id VARCHAR(15),
+    attendance_id VARCHAR(15),
     at_student_id VARCHAR(15),
     at_course_code VARCHAR(15),
-    type(T/P) VARCHAR(10),
+    at_course_type(T/P) VARCHAR(10),
 --    /*not now*/ eligibility VARCHAR(8) NOT NULL,
-    date DATE ,
+    date DATE,
+    attendence VARCHAR(20),
     medical_status VARCHAR(15),
     session_no INT NOT NULL,
     to_id VARCHAR(15),
     PRIMARY KEY(at_student_id,at_course_code),
     FOREIGN KEY (at_student_id) REFERENCES student(student_id) ON DELETE CASCADE,
-    FOREIGN KEY (at_course_code) REFERENCES course_unit(course_code) ON DELETE CASCADE,
+    FOREIGN KEY (at_course_code,at_course_type) REFERENCES course_unit(course_code,type) ON DELETE CASCADE,
     FOREIGN KEY (to_id) REFERENCES technical_officer(to_id) ON DELETE CASCADE
 );
+
+
+
 
 
 
