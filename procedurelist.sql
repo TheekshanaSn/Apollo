@@ -16,3 +16,22 @@ END $$
 DELIMITER ;
 
 CALL course_details("ENG1222");
+
+
+DELIMITER $$
+
+CREATE PROCEDURE student_course(IN student_id VARCHAR(15))
+BEGIN
+    SELECT cu.course_code AS "COURSE CODE",
+	       cu.name AS "COURSE NAME",
+		   cu.type AS "TYPE"
+    FROM student AS s 
+    JOIN student_course_unit AS scu ON s.student_id = scu.student_id
+    JOIN course_unit AS cu ON cu.course_code = scu.course_code
+    WHERE s.student_id = student_id; 
+END $$
+
+DELIMITER ;
+
+
+CALL student_course('TG1376');
