@@ -25,6 +25,9 @@ WHERE Attendance_id ="AT0280" OR
       Attendance_id ="AT0950" OR
       Attendance_id ="AT0972" OR
       Attendance_id ="AT0976" OR
-      Attendance_id ="AT1000" ;
+      Attendance_id ="AT0977" OR
+      Attendance_id ="AT0978" OR
+      Attendance_id ="AT0979" OR
+      Attendance_id ="AT1000";
 
 
