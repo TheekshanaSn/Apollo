@@ -18,6 +18,15 @@ CREATE TABLE course_unit
     FOREIGN KEY (c_lecturer_id) REFERENCES lecturer(lecturer_id) ON DELETE SET NULL
 );
 
+CREATE TABLE lecturer
+(
+    lecturer_id VARCHAR(15),
+    department VARCHAR(70) NOT NULL, 
+    lc_nic VARCHAR(15) NOT NULL,
+    PRIMARY KEY(lecturer_id),
+    FOREIGN KEY (lc_nic) REFERENCES user(u_nic) ON DELETE CASCADE
+);
+
 
 INSERT INTO course_unit (course_code,name,type,credit,c_lecturer_id,c_to_id)
 VALUES
