@@ -146,6 +146,7 @@ INSERT INTO attendance(attendance_id,at_student_id,at_course_code,at_course_type
 VALUES
 
 -- TG1376
+
 ('AT0001','TG1376','ICT1212','T','2024-08-13','present',NULL,1,'To001'),
 ('AT0002','TG1376','ICT1222','P','2024-08-13','present',NULL,1,'To001'), 
 ('AT0003','TG1376','ICT1212','T','2024-08-20','absences',NULL,2,'To001'), 
