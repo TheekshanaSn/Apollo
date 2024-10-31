@@ -22,3 +22,20 @@ END //
 DELIMITER ;
 
 call course_student('ICT1212');
+
+
+
+-----------------Check student quize marks-----------------------
+
+DELIMITER //
+
+CREATE PROCEDURE check_quize_marks(IN st_id VARCHAR(10))
+BEGIN
+SELECT course_code AS "Course code", ((Q1 + Q2 + Q3 - LEAST(Q1, LEAST(Q2, Q3))) / 2) * 0.05 AS "Five_Percent_Average_Quiz_Score"
+FROM marks
+WHERE student_id = st_id;
+END //
+
+DELIMITER ;
+
+CALL check_quize_marks('TG1444');
