@@ -28,7 +28,7 @@ VALUES
 ('TG1398', 'ICT1242', 66, 83, 87, 72, 84, 0, 71, 0),
 ('TG1398', 'ICT1253', 88, 90, 74, 77, 69, 71, 86, 80),
 ('TG1398', 'TMS1233', 79, 82, 67, 75, 76, 0, 73, 0),
-('TG1398', 'ENG122', 83, 86, 85, 78, 70, 0, 81, 0),
+('TG1398', 'ENG1222', 83, 86, 85, 78, 70, 0, 81, 0),
 ('TG1398', 'TCS1212', 89, 82, 73, 84, 88, 0, 80, 0);
 -- Insert data for student tg1366--
 INSERT INTO marks (student_id, course_code, Q1, Q2, Q3, assessment_mark, mid_exam_theory, mid_exam_practical, final_exam_theory, final_exam_practical) 
@@ -40,7 +40,7 @@ VALUES
 ('TG1366', 'ICT1242', 88, 68, 80, 70, 79, 0, 78, 0),
 ('TG1366', 'ICT1253', 65, 89, 81, 88, 80, 76, 72, 70),
 ('TG1366', 'TMS1233', 77, 75, 74, 73, 76, 0, 80, 0),
-('TG1366', 'ENG122', 70, 82, 90, 84, 88, 0, 82, 0),
+('TG1366', 'ENG1222', 70, 82, 90, 84, 88, 0, 82, 0),
 ('TG1366', 'TCS1212', 84, 68, 76, 78, 79, 0, 85, 0);
 -- Insert data for student tg1353--
 INSERT INTO marks (student_id, course_code, Q1, Q2, Q3, assessment_mark, mid_exam_theory, mid_exam_practical, final_exam_theory, final_exam_practical) 
@@ -51,7 +51,7 @@ VALUES
 ('TG1353', 'ICT1242', 66, 88, 84, 75, 72, 0, 76, 0),
 ('TG1353', 'ICT1253', 90, 78, 89, 82, 88, 86, 84, 81),
 ('TG1353', 'TMS1233', 75, 72, 66, 70, 78, 0, 80, 0),
-('TG1353', 'ENG122', 81, 79, 87, 82, 85, 0, 81, 0),
+('TG1353', 'ENG1222', 81, 79, 87, 82, 85, 0, 81, 0),
 ('TG1353', 'TCS1212', 88, 82, 75, 84, 80, 0, 83, 0);
 
 -- Insert data for student tg1474--
