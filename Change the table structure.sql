@@ -5,7 +5,14 @@ CHANGE attendence attendance VARCHAR(20);
 
 UPDATE attendance 
 SET attendance='absences' 
-WHERE Attendance_id ="AT0280" OR 
+WHERE Attendance_id ="AT0347" OR 
+      Attendance_id ="AT0348" OR 
+      Attendance_id ="AT0467" OR 
+      Attendance_id ="AT0469" OR 
+      Attendance_id ="AT0470" OR 
+      Attendance_id ="AT0471" OR 
+      Attendance_id ="AT0473" OR 
+      Attendance_id ="AT0280" OR 
       Attendance_id ="AT0290" OR
       Attendance_id ="AT0334" OR
       Attendance_id ="AT0335" OR
