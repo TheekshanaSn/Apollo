@@ -88,5 +88,39 @@ End//
 DELIMITER ;
 
 
+CALL attendance_for_subject('TG1366','T');
+
+
+
+
+
+--View  With Attendance with medical only theory
+CREATE VIEW attendance_with_medical_theory AS
+SELECT at_student_id,at_course_code,(COUNT( attendance_id))/15*100 AS 'percentage',
+IF((COUNT( attendance_id)*100/15)>=80,"Eligible","Not eligible") AS 'Eligibility'
+FROM attendance 
+WHERE at_course_type='T' AND (attendance = 'Present' OR medical_status IS NOT NULL)
+GROUP BY at_student_id,at_course_code;
+
+
+--View  With Attendance with medical only pactical
+CREATE VIEW attendance_with_medical_pactical AS
+SELECT at_student_id,at_course_code,(COUNT( attendance_id))/15*100 AS 'percentage',
+IF((COUNT( attendance_id)*100/15)>=80,"Eligible","Not eligible") AS 'Eligibility'
+FROM attendance 
+WHERE at_course_type='P' AND (attendance = 'Present' OR medical_status IS NOT NULL)
+GROUP BY at_student_id,at_course_code;
+
+
+
+--View  With Attendance with medical only theory and pactical
+CREATE VIEW attendance_with_medical_theory_and_pactical AS
+SELECT at_student_id,at_course_code,(COUNT( attendance_id))/15*100 AS 'percentage',
+IF((COUNT( attendance_id)*100/15)>=80,"Eligible","Not eligible") AS 'Eligibility'
+FROM attendance 
+WHERE at_course_type='TP' AND (attendance = 'Present' OR medical_status IS NOT NULL)
+GROUP BY at_student_id,at_course_code;
+
+
 
 
