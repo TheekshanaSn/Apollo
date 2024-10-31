@@ -9,7 +9,7 @@ CREATE TABLE course_unit
 (
     course_code VARCHAR(15),
     name VARCHAR(50) NOT NULL, 
-    type VARCHAR(20) ,
+    type VARCHAR(10) ,
     credit INT NOT NULL CHECK (credit > 0 AND credit < 4), 
     c_to_id VARCHAR(15) NOT NULL,
     c_lecturer_id VARCHAR(15) NOT NULL,
