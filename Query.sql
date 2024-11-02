@@ -7,6 +7,15 @@ ON l.lc_nic = u.u_nic;
 select * from lecture_detail;
 
 
+-------------------------------Student Details--------------------------------------
+CREATE VIEW Student_details AS
+SELECT s.student_id, s.department, s.acedemic_year, s.st_nic, CONCAT(u.f_name, ' ', u.l_name) AS Name, u.gender, u.email, u.address, s.status
+FROM student s INNER JOIN user u
+ON s.st_nic = u.u_nic;
+
+SELECT * FROM Student_details;
+
+
 --------------------course of student----------------------
 DELIMITER //
 

@@ -28,3 +28,33 @@ CREATE TABLE technical_officer_course_unit
     FOREIGN KEY (to_id) REFERENCES technical_officer(to_id) ON DELETE CASCADE,
     FOREIGN KEY (course_code) REFERENCES course_unit(course_code) ON DELETE CASCADE
 );
+
+
+------------------------Create Accounts-----------------------------------------
+
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'adminpwd';
+GRANT ALL PRIVILEGES ON apollo.* TO 'admin'@'localhost' WITH GRANT OPTION;
+
+CREATE USER 'dean'@'localhost' IDENTIFIED BY 'deanpwd';
+GRANT ALL PRIVILEGES ON apollo.* TO 'dean'@'localhost';
+
+CREATE USER 'lecturer'@'localhost' IDENTIFIED BY 'lecturerpwd';
+GRANT SELECT, INSERT, UPDATE, DELETE ON apollo.* TO 'lecturer'@'localhost';
+
+CREATE USER 'technical_officer'@'localhost' IDENTIFIED BY 'topwd';
+GRANT SELECT, INSERT, UPDATE ON apollo.Attendance TO 'technical_officer'@'localhost';
+GRANT SELECT, INSERT, UPDATE ON apollo.view_attendance_percentage TO 'technical_officer'@'localhost';
+
+
+CREATE USER 'technical_officer'@'localhost' IDENTIFIED BY 'technical_officer_password';
+GRANT SELECT, INSERT, UPDATE ON apollo.Attendance TO 'technical_officer'@'localhost';
+GRANT SELECT, INSERT, UPDATE ON apollo.view_attendance_percentage TO 'technical_officer'@'localhost';
+
+
+CREATE USER 'student'@'localhost' IDENTIFIED BY 'student_password';
+GRANT SELECT ON apollo.view_attendance_summary_individual TO 'student'@'localhost';
+GRANT SELECT ON apollo.view_final_marks_individual TO 'student'@'localhost';
+GRANT SELECT ON apollo.view_grades_individual TO 'student'@'localhost';
+
+
+FLUSH PRIVILEGES;
