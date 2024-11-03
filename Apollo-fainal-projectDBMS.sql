@@ -1950,6 +1950,34 @@ WHERE Attendance_id ="AT0347" OR
 
 
 
+------------------------Create Accounts-----------------------------------------
+
+CREATE USER 'admin'@'localhost' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+
+CREATE USER 'dean'@'localhost' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON apollo.* TO 'dean'@'localhost';
+
+CREATE USER 'lecturer'@'localhost' IDENTIFIED BY '1234';
+GRANT SELECT, INSERT, UPDATE, DELETE ON apollo.* TO 'lecturer'@'localhost';
+
+CREATE USER 'technical_officer'@'localhost' IDENTIFIED BY '1234';
+GRANT SELECT, INSERT, UPDATE ON apollo.Attendance TO 'tech_officer'@'localhost';
+
+CREATE USER 'student'@'localhost' IDENTIFIED BY '1234';
+GRANT SELECT ON apollo.Attendance TO 'student'@'localhost';
+GRANT SELECT ON apollo.Marks TO 'student'@'localhost';
+
+
+FLUSH PRIVILEGES;
+
+
+
+
+
+
+
+
       DELIMITER $$
 
 CREATE PROCEDURE course_details(IN C_code VARCHAR(15))
@@ -2158,6 +2186,86 @@ FROM
          ca_eligibility_view ca ON fm.student_id = ca.student_id AND fm.course_code = ca.course_code
     JOIN
          student s ON fm.student_id = s.student_id;
+
+
+
+-------------Student SGPA -----------------
+CREATE VIEW Student_SGPA AS
+SELECT 
+    student_id,
+    CASE 
+        WHEN total_credits > 0 THEN ROUND(total_grade_points / total_credits, 5)
+        ELSE 0.00000
+    END AS SGPA
+FROM 
+    (SELECT 
+        s.student_id,
+        SUM(CASE 
+                WHEN s.grade = 'A+' THEN 4.0
+                WHEN s.grade = 'A' THEN 4.0
+                WHEN s.grade = 'A-' THEN 3.7
+                WHEN s.grade = 'B+' THEN 3.3
+                WHEN s.grade = 'B' THEN 3.0
+                WHEN s.grade = 'B-' THEN 2.7
+                WHEN s.grade = 'C+' THEN 2.3
+                WHEN s.grade = 'C' THEN 2.0
+                WHEN s.grade = 'C-' THEN 1.7
+                WHEN s.grade = 'D+' THEN 1.3
+                WHEN s.grade = 'D' THEN 1.0
+                WHEN s.grade = 'E' THEN 0.7
+                WHEN s.grade = 'E*' THEN 0.5
+                WHEN s.grade = 'F' THEN 0.0
+                ELSE 0
+            END) AS total_grade_points,
+        COUNT(s.course_code) AS total_credits
+     FROM 
+        student_final_grades3 s
+     WHERE 
+        s.course_code != 'ENG1222'  -- Exclude the specified course
+     GROUP BY 
+        s.student_id) AS grades_summary;
+
+
+select * from Student_SGPA;
+
+
+
+--------------------------------------------------------------------------------
+
+CREATE VIEW Student_CGPA AS
+SELECT 
+    student_id,
+    CASE 
+        WHEN total_credits > 0 THEN ROUND(total_grade_points / total_credits, 5)
+        ELSE 0.00000
+    END AS CGPA
+FROM 
+    (SELECT 
+        s.student_id,
+        SUM(CASE 
+                WHEN s.grade = 'A+' THEN 4.0
+                WHEN s.grade = 'A' THEN 4.0
+                WHEN s.grade = 'A-' THEN 3.7
+                WHEN s.grade = 'B+' THEN 3.3
+                WHEN s.grade = 'B' THEN 3.0
+                WHEN s.grade = 'B-' THEN 2.7
+                WHEN s.grade = 'C+' THEN 2.3
+                WHEN s.grade = 'C' THEN 2.0
+                WHEN s.grade = 'C-' THEN 1.7
+                WHEN s.grade = 'D+' THEN 1.3
+                WHEN s.grade = 'D' THEN 1.0
+                WHEN s.grade = 'E' THEN 0.7
+                WHEN s.grade = 'E*' THEN 0.5
+                WHEN s.grade = 'F' THEN 0.0
+                ELSE 0
+            END) AS total_grade_points,
+        COUNT(s.course_code) AS total_credits
+     FROM 
+        student_final_grades3 s
+     GROUP BY 
+        s.student_id) AS grades_summary;
+
+
 
 
 
