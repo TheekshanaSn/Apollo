@@ -95,7 +95,7 @@ CREATE TABLE lecturer
     department VARCHAR(70) NOT NULL, 
     lc_nic VARCHAR(15) NOT NULL,
     PRIMARY KEY(lecturer_id),
-    FOREIGN KEY(lc_nic) REFERENCES user(u_nic) ON DELETE CASCADE
+    FOREIGN KEY (lc_nic) REFERENCES user(u_nic) ON DELETE CASCADE
 );
 
 -- Nimesh
@@ -115,8 +115,8 @@ CREATE TABLE course_unit
     name VARCHAR(50) NOT NULL, 
     type VARCHAR(20) ,
     credit INT NOT NULL CHECK (credit > 0 AND credit < 4), 
-    c_to_id VARCHAR(15),
-    c_lecturer_id VARCHAR(15),
+    c_to_id VARCHAR(15) NOT NULL,
+    c_lecturer_id VARCHAR(15) NOT NULL,
     PRIMARY KEY(course_code,type),
     FOREIGN KEY (c_to_id) REFERENCES technical_officer(to_id) ON DELETE SET NULL, 
     FOREIGN KEY (c_lecturer_id) REFERENCES lecturer(lecturer_id) ON DELETE SET NULL
@@ -159,6 +159,8 @@ CREATE TABLE marks
     mid_exam_practical INT CHECK (mid_exam_practical BETWEEN 0 AND 100),
     final_exam_theory INT CHECK (final_exam_theory BETWEEN 0 AND 100),
     final_exam_practical INT CHECK (final_exam_practical BETWEEN 0 AND 100),
+    
+   
     PRIMARY KEY(student_id,course_code),
     FOREIGN KEY (student_id) REFERENCES student(student_id) ON DELETE CASCADE,
     FOREIGN KEY (course_code) REFERENCES course_unit(course_code) ON DELETE CASCADE
