@@ -35,3 +35,37 @@ DELIMITER ;
 
 
 CALL student_course('TG1376');
+
+CREATE VIEW Student_CGPA AS
+SELECT 
+    student_id,
+    CASE 
+        WHEN total_credits > 0 THEN ROUND(total_grade_points / total_credits, 5)
+        ELSE 0.00000
+    END AS CGPA
+FROM 
+    (SELECT 
+        s.student_id,
+        SUM(CASE 
+                WHEN s.grade = 'A+' THEN 4.0
+                WHEN s.grade = 'A' THEN 4.0
+                WHEN s.grade = 'A-' THEN 3.7
+                WHEN s.grade = 'B+' THEN 3.3
+                WHEN s.grade = 'B' THEN 3.0
+                WHEN s.grade = 'B-' THEN 2.7
+                WHEN s.grade = 'C+' THEN 2.3
+                WHEN s.grade = 'C' THEN 2.0
+                WHEN s.grade = 'C-' THEN 1.7
+                WHEN s.grade = 'D+' THEN 1.3
+                WHEN s.grade = 'D' THEN 1.0
+                WHEN s.grade = 'E' THEN 0.7
+                WHEN s.grade = 'E*' THEN 0.5
+                WHEN s.grade = 'F' THEN 0.0
+                ELSE 0
+            END) AS total_grade_points,
+        COUNT(s.course_code) AS total_credits
+     FROM 
+        student_final_grades3 s
+     GROUP BY 
+        s.student_id) AS grades_summary;
+
