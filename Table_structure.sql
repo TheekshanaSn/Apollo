@@ -32,29 +32,21 @@ CREATE TABLE technical_officer_course_unit
 
 ------------------------Create Accounts-----------------------------------------
 
-CREATE USER 'admin'@'localhost' IDENTIFIED BY 'adminpwd';
-GRANT ALL PRIVILEGES ON apollo.* TO 'admin'@'localhost' WITH GRANT OPTION;
+CREATE USER 'admin'@'localhost' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
 
-CREATE USER 'dean'@'localhost' IDENTIFIED BY 'deanpwd';
+CREATE USER 'dean'@'localhost' IDENTIFIED BY '1234';
 GRANT ALL PRIVILEGES ON apollo.* TO 'dean'@'localhost';
 
-CREATE USER 'lecturer'@'localhost' IDENTIFIED BY 'lecturerpwd';
+CREATE USER 'lecturer'@'localhost' IDENTIFIED BY '1234';
 GRANT SELECT, INSERT, UPDATE, DELETE ON apollo.* TO 'lecturer'@'localhost';
 
-CREATE USER 'technical_officer'@'localhost' IDENTIFIED BY 'topwd';
-GRANT SELECT, INSERT, UPDATE ON apollo.Attendance TO 'technical_officer'@'localhost';
-GRANT SELECT, INSERT, UPDATE ON apollo.view_attendance_percentage TO 'technical_officer'@'localhost';
+CREATE USER 'technical_officer'@'localhost' IDENTIFIED BY '1234';
+GRANT SELECT, INSERT, UPDATE ON apollo.Attendance TO 'tech_officer'@'localhost';
 
-
-CREATE USER 'technical_officer'@'localhost' IDENTIFIED BY 'technical_officer_password';
-GRANT SELECT, INSERT, UPDATE ON apollo.Attendance TO 'technical_officer'@'localhost';
-GRANT SELECT, INSERT, UPDATE ON apollo.view_attendance_percentage TO 'technical_officer'@'localhost';
-
-
-CREATE USER 'student'@'localhost' IDENTIFIED BY 'student_password';
-GRANT SELECT ON apollo.view_attendance_summary_individual TO 'student'@'localhost';
-GRANT SELECT ON apollo.view_final_marks_individual TO 'student'@'localhost';
-GRANT SELECT ON apollo.view_grades_individual TO 'student'@'localhost';
+CREATE USER 'student'@'localhost' IDENTIFIED BY '1234';
+GRANT SELECT ON apollo.Attendance TO 'student'@'localhost';
+GRANT SELECT ON apollo.Marks TO 'student'@'localhost';
 
 
 FLUSH PRIVILEGES;
