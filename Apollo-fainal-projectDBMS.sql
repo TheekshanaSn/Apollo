@@ -1722,6 +1722,372 @@ VALUES
 
 
 
+-- suspended attendance add
+
+
+INSERT INTO attendance(attendance_id, at_student_id, at_course_code, at_course_type, date, attendance, medical_status, session_no, at_to_id)
+VALUES
+('AT1186', 'TG1393', 'ICT1212', 'T', '2024-08-13', 'absences', NULL, 1, 'To001'),
+('AT1187', 'TG1393', 'ICT1222', 'P', '2024-08-13', 'absences', NULL, 1, 'To001'), 
+('AT1188', 'TG1393', 'ICT1212', 'T', '2024-08-20', 'absences', NULL, 2, 'To001'), 
+('AT1189', 'TG1393', 'ICT1222', 'P', '2024-08-20', 'absences', NULL, 2, 'To001'),
+('AT1190', 'TG1393', 'ICT1212', 'T', '2024-08-27', 'absences', NULL, 3, 'To001'),
+('AT1191', 'TG1393', 'ICT1222', 'P', '2024-08-27', 'absences', NULL, 3, 'To001'),
+('AT1192', 'TG1393', 'ICT1212', 'T', '2024-08-03', 'absences', NULL, 4, 'To001'),
+('AT1193', 'TG1393', 'ICT1222', 'P', '2024-08-03', 'absences', NULL, 4, 'To001'),
+('AT1194', 'TG1393', 'ICT1212', 'T', '2024-08-10', 'absences', NULL, 5, 'To001'),
+('AT1195', 'TG1393', 'ICT1222', 'P', '2024-08-10', 'absences', NULL, 5, 'To001'),
+('AT1196', 'TG1393', 'ICT1212', 'T', '2024-08-17', 'absences', NULL, 6, 'To001'),
+('AT1197', 'TG1393', 'ICT1222', 'P', '2024-08-17', 'absences', NULL, 6, 'To001'),
+('AT1198', 'TG1393', 'ICT1212', 'T', '2024-08-24', 'absences', NULL, 7, 'To001'),
+('AT1199', 'TG1393', 'ICT1222', 'P', '2024-08-24', 'absences', NULL, 7, 'To001'),
+('AT1200', 'TG1393', 'ICT1212', 'T', '2024-09-01', 'absences', NULL, 8, 'To001'),
+('AT1201', 'TG1393', 'ICT1222', 'P', '2024-09-01', 'absences', NULL, 8, 'To001'),
+('AT1202', 'TG1393', 'ICT1212', 'T', '2024-09-08', 'absences', NULL, 9, 'To001'),
+('AT1203', 'TG1393', 'ICT1222', 'P', '2024-09-08', 'absences', NULL, 9, 'To001'),
+('AT1204', 'TG1393', 'ICT1212', 'T', '2024-09-15', 'absences', NULL, 10, 'To001'),
+('AT1205', 'TG1393', 'ICT1222', 'P', '2024-09-15', 'absences', NULL, 10, 'To001'),
+('AT1206', 'TG1393', 'ICT1212', 'T', '2024-09-21', 'absences', NULL, 11, 'To001'),
+('AT1207', 'TG1393', 'ICT1222', 'P', '2024-09-21', 'absences', NULL, 11, 'To001'),
+('AT1208', 'TG1393', 'ICT1212', 'T', '2024-09-28', 'absences', NULL, 12, 'To001'),
+('AT1209', 'TG1393', 'ICT1222', 'P', '2024-09-28', 'absences', NULL, 12, 'To001'),
+('AT1210', 'TG1393', 'ICT1212', 'T', '2024-10-05', 'absences', NULL, 13, 'To001'),
+('AT1211', 'TG1393', 'ICT1222', 'P', '2024-10-05', 'absences', NULL, 13, 'To001'),
+('AT1212', 'TG1393', 'ICT1212', 'T', '2024-10-12', 'absences', NULL, 14, 'To001'),
+('AT1213', 'TG1393', 'ICT1222', 'P', '2024-10-12', 'absences', NULL, 14, 'To001'),
+('AT1214', 'TG1393', 'ICT1212', 'T', '2024-10-19', 'absences', NULL, 15, 'To001'),
+('AT1215', 'TG1393', 'ICT1222', 'P', '2024-10-19', 'absences', NULL, 15, 'To001');
+
+
+
+INSERT INTO attendance(attendance_id, at_student_id, at_course_code, at_course_type, date, attendance, medical_status, session_no, at_to_id)
+VALUES
+('AT01216', 'TG1393', 'ICT1233', 'T', '2024-08-14', 'absences', NULL, 1, 'To001'),
+('AT01217', 'TG1393', 'ICT1233', 'T', '2024-08-21', 'absences', NULL, 2, 'To001'),
+('AT01218', 'TG1393', 'ICT1233', 'T', '2024-08-28', 'absences', NULL, 3, 'To001'),
+('AT01219', 'TG1393', 'ICT1233', 'T', '2024-09-05', 'absences', NULL, 4, 'To001'),
+('AT01220', 'TG1393', 'ICT1233', 'T', '2024-09-12', 'absences', NULL, 5, 'To001'),
+('AT01221', 'TG1393', 'ICT1233', 'T', '2024-09-19', 'absences', NULL, 6, 'To001'),
+('AT01222', 'TG1393', 'ICT1233', 'T', '2024-09-26', 'absences', NULL, 7, 'To001'),
+('AT01223', 'TG1393', 'ICT1233', 'T', '2024-10-03', 'absences', NULL, 8, 'To001'),
+('AT01224', 'TG1393', 'ICT1233', 'T', '2024-10-10', 'absences', NULL, 9, 'To001'),
+('AT01225', 'TG1393', 'ICT1233', 'T', '2024-10-17', 'absences', NULL, 10, 'To001'),
+('AT01226', 'TG1393', 'ICT1233', 'T', '2024-10-24', 'absences', NULL, 11, 'To001'),
+('AT01227', 'TG1393', 'ICT1233', 'T', '2024-10-31', 'absences', NULL, 12, 'To001'),
+('AT01228', 'TG1393', 'ICT1233', 'T', '2024-11-07', 'absences', NULL, 13, 'To001'),
+('AT01229', 'TG1393', 'ICT1233', 'T', '2024-11-14', 'absences', NULL, 14, 'To001'),
+('AT01230', 'TG1393', 'ICT1233', 'T', '2024-11-21', 'absences', NULL, 15, 'To001'),
+
+('AT01231', 'TG1393', 'ICT1233', 'P', '2024-08-14', 'absences', NULL, 1, 'To001'),
+('AT01232', 'TG1393', 'ICT1233', 'P', '2024-08-21', 'absences', NULL, 2, 'To001'),
+('AT01233', 'TG1393', 'ICT1233', 'P', '2024-08-28', 'absences', NULL, 3, 'To001'),
+('AT01234', 'TG1393', 'ICT1233', 'P', '2024-09-05', 'absences', NULL, 4, 'To001'),
+('AT01235', 'TG1393', 'ICT1233', 'P', '2024-09-12', 'absences', NULL, 5, 'To001'),
+('AT01236', 'TG1393', 'ICT1233', 'P', '2024-09-19', 'absences', NULL, 6, 'To001'),
+('AT01237', 'TG1393', 'ICT1233', 'P', '2024-09-26', 'absences', NULL, 7, 'To001'),
+('AT01238', 'TG1393', 'ICT1233', 'P', '2024-10-03', 'absences', NULL, 8, 'To001'),
+('AT01239', 'TG1393', 'ICT1233', 'P', '2024-10-10', 'absences', NULL, 9, 'To001'),
+('AT01240', 'TG1393', 'ICT1233', 'P', '2024-10-17', 'absences', NULL, 10, 'To001'),
+('AT01241', 'TG1393', 'ICT1233', 'P', '2024-10-24', 'absences', NULL, 11, 'To001'),
+('AT01242', 'TG1393', 'ICT1233', 'P', '2024-10-31', 'absences', NULL, 12, 'To001'),
+('AT01243', 'TG1393', 'ICT1233', 'P', '2024-11-07', 'absences', NULL, 13, 'To001'),
+('AT01244', 'TG1393', 'ICT1233', 'P', '2024-11-14', 'absences', NULL, 14, 'To001'),
+('AT01245', 'TG1393', 'ICT1233', 'P', '2024-11-21', 'absences', NULL, 15, 'To001');
+
+
+
+INSERT INTO attendance(attendance_id, at_student_id, at_course_code, at_course_type, date, attendance, medical_status, session_no, at_to_id)
+VALUES
+('AT1246', 'TG1393', 'ICT1242', 'T', '2024-08-15', 'absences', NULL, 1, 'To001'),
+('AT1247', 'TG1393', 'ICT1242', 'T', '2024-08-22', 'absences', NULL, 2, 'To001'),
+('AT1248', 'TG1393', 'ICT1242', 'T', '2024-08-29', 'absences', NULL, 3, 'To001'),
+('AT1249', 'TG1393', 'ICT1242', 'T', '2024-09-06', 'absences', NULL, 4, 'To001'),
+('AT1250', 'TG1393', 'ICT1242', 'T', '2024-09-13', 'absences', NULL, 5, 'To001'),
+('AT1251', 'TG1393', 'ICT1242', 'T', '2024-09-20', 'absences', NULL, 6, 'To001'),
+('AT1252', 'TG1393', 'ICT1242', 'T', '2024-09-27', 'absences', NULL, 7, 'To001'),
+('AT1253', 'TG1393', 'ICT1242', 'T', '2024-10-04', 'absences', NULL, 8, 'To001'),
+('AT1254', 'TG1393', 'ICT1242', 'T', '2024-10-27', 'absences', NULL, 9, 'To001'),
+('AT1255', 'TG1393', 'ICT1242', 'T', '2024-11-03', 'absences', NULL, 10, 'To001'),
+('AT1256', 'TG1393', 'ICT1242', 'T', '2024-11-10', 'absences', NULL, 11, 'To001'),
+('AT1257', 'TG1393', 'ICT1242', 'T', '2024-11-17', 'absences', NULL, 12, 'To001'),
+('AT1258', 'TG1393', 'ICT1242', 'T', '2024-11-24', 'absences', NULL, 13, 'To001'),
+('AT1259', 'TG1393', 'ICT1242', 'T', '2024-12-01', 'absences', NULL, 14, 'To001'),
+('AT1260', 'TG1393', 'ICT1242', 'T', '2024-12-08', 'absences', NULL, 15, 'To001'),
+
+('AT1261', 'TG1393', 'ICT1253', 'T', '2024-08-16', 'absences', NULL, 1, 'To001'),
+('AT1262', 'TG1393', 'ICT1253', 'T', '2024-08-23', 'absences', NULL, 2, 'To001'),
+('AT1263', 'TG1393', 'ICT1253', 'T', '2024-08-30', 'absences', NULL, 3, 'To001'),
+('AT1264', 'TG1393', 'ICT1253', 'T', '2024-09-07', 'absences', NULL, 4, 'To001'),
+('AT1265', 'TG1393', 'ICT1253', 'T', '2024-09-14', 'absences', NULL, 5, 'To001'),
+('AT1266', 'TG1393', 'ICT1253', 'T', '2024-09-21', 'absences', NULL, 6, 'To001'),
+('AT1267', 'TG1393', 'ICT1253', 'T', '2024-09-28', 'absences', NULL, 7, 'To001'),
+('AT1268', 'TG1393', 'ICT1253', 'T', '2024-10-05', 'absences', NULL, 8, 'To001'),
+('AT1269', 'TG1393', 'ICT1253', 'T', '2024-10-12', 'absences', NULL, 9, 'To001'),
+('AT1270', 'TG1393', 'ICT1253', 'T', '2024-10-19', 'absences', NULL, 10, 'To001'),
+('AT1271', 'TG1393', 'ICT1253', 'T', '2024-10-26', 'absences', NULL, 11, 'To001'),
+('AT1272', 'TG1393', 'ICT1253', 'T', '2024-11-02', 'absences', NULL, 12, 'To001'),
+('AT1273', 'TG1393', 'ICT1253', 'T', '2024-11-09', 'absences', NULL, 13, 'To001'),
+('AT1274', 'TG1393', 'ICT1253', 'T', '2024-11-16', 'absences', NULL, 14, 'To001'),
+('AT1275', 'TG1393', 'ICT1253', 'T', '2024-11-23', 'absences', NULL, 15, 'To001');
+
+
+INSERT INTO attendance(attendance_id, at_student_id, at_course_code, at_course_type, date, attendance, medical_status, session_no, at_to_id)
+VALUES
+('AT1276', 'TG1393', 'ICT1253', 'P', '2024-08-16', 'absences', NULL, 1, 'To001'),
+('AT1277', 'TG1393', 'ICT1253', 'P', '2024-08-23', 'absences', NULL, 2, 'To001'),
+('AT1278', 'TG1393', 'ICT1253', 'P', '2024-08-30', 'absences', NULL, 3, 'To001'),
+('AT1279', 'TG1393', 'ICT1253', 'P', '2024-09-07', 'absences', NULL, 4, 'To001'),
+('AT1280', 'TG1393', 'ICT1253', 'P', '2024-09-14', 'absences', NULL, 5, 'To001'),
+('AT1281', 'TG1393', 'ICT1253', 'P', '2024-09-21', 'absences', NULL, 6, 'To001'),
+('AT1282', 'TG1393', 'ICT1253', 'P', '2024-09-28', 'absences', NULL, 7, 'To001'),
+('AT1283', 'TG1393', 'ICT1253', 'P', '2024-10-05', 'absences', NULL, 8, 'To001'),
+('AT1284', 'TG1393', 'ICT1253', 'P', '2024-10-12', 'absences', NULL, 9, 'To001'),
+('AT1285', 'TG1393', 'ICT1253', 'P', '2024-10-19', 'absences', NULL, 10, 'To001'),
+('AT1286', 'TG1393', 'ICT1253', 'P', '2024-10-26', 'absences', NULL, 11, 'To001'),
+('AT1287', 'TG1393', 'ICT1253', 'P', '2024-11-02', 'absences', NULL, 12, 'To001'),
+('AT1288', 'TG1393', 'ICT1253', 'P', '2024-11-09', 'absences', NULL, 13, 'To001'),
+('AT1289', 'TG1393', 'ICT1253', 'P', '2024-11-16', 'absences', NULL, 14, 'To001'),
+('AT1290', 'TG1393', 'ICT1253', 'P', '2024-11-23', 'absences',NULL, 15, 'To001'),
+
+('AT1291', 'TG1393', 'TMS1233', 'T', '2024-08-17', 'absences', NULL, 1, 'To001'),
+('AT1292', 'TG1393', 'TMS1233', 'T', '2024-08-24', 'absences', NULL, 2, 'To001'),
+('AT1293', 'TG1393', 'TMS1233', 'T', '2024-08-31', 'absences', NULL, 3, 'To001'),
+('AT1294', 'TG1393', 'TMS1233', 'T', '2024-09-08', 'absences', NULL, 4, 'To001'),
+('AT1295', 'TG1393', 'TMS1233', 'T', '2024-09-15', 'absences', NULL, 5, 'To001'),
+('AT1296', 'TG1393', 'TMS1233', 'T', '2024-09-22', 'absences', NULL, 6, 'To001'),
+('AT1297', 'TG1393', 'TMS1233', 'T', '2024-09-29', 'absences', NULL, 7, 'To001'),
+('AT1298', 'TG1393', 'TMS1233', 'T', '2024-10-06', 'absences', NULL, 8, 'To001'),
+('AT1299', 'TG1393', 'TMS1233', 'T', '2024-10-29', 'absences', NULL, 9, 'To001'),
+('AT1300', 'TG1393', 'TMS1233', 'T', '2024-11-05', 'absences', NULL, 10, 'To001'),
+('AT1301', 'TG1393', 'TMS1233', 'T', '2024-11-12', 'absences', NULL, 11, 'To001'),
+('AT1302', 'TG1393', 'TMS1233', 'T', '2024-11-19', 'absences', NULL, 12, 'To001'),
+('AT1303', 'TG1393', 'TMS1233', 'T', '2024-11-26', 'absences', NULL, 13, 'To001'),
+('AT1304', 'TG1393', 'TMS1233', 'T', '2024-12-03', 'absences', NULL, 14, 'To001'),
+('AT1305', 'TG1393', 'TMS1233', 'T', '2024-12-10', 'absences', NULL, 15, 'To001');
+
+
+
+
+INSERT INTO attendance(attendance_id, at_student_id, at_course_code, at_course_type, date, attendance, medical_status, session_no, at_to_id)
+VALUES
+    ('AT1306', 'TG1688', 'BST1212', 'TP', '2024-08-13', 'absences', NULL, 1, 'To004'),
+    ('AT1307', 'TG1688', 'BST1212', 'TP', '2024-08-20', 'absences', NULL, 2, 'To004'),
+    ('AT1308', 'TG1688', 'BST1212', 'TP', '2024-08-27', 'absences', NULL, 3, 'To004'),
+    ('AT1309', 'TG1688', 'BST1212', 'TP', '2024-09-03', 'absences', NULL, 4, 'To004'),
+    ('AT1310', 'TG1688', 'BST1212', 'TP', '2024-09-10', 'absences', NULL, 5, 'To004'),
+    ('AT1311', 'TG1688', 'BST1212', 'TP', '2024-09-17', 'absences', NULL, 6, 'To004'),
+    ('AT1312', 'TG1688', 'BST1212', 'TP', '2024-09-24', 'absences', NULL, 7, 'To004'),
+    ('AT1313', 'TG1688', 'BST1212', 'TP', '2024-10-01', 'absences', NULL, 8, 'To004'),
+    ('AT1314', 'TG1688', 'BST1212', 'TP', '2024-10-08', 'absences', NULL, 9, 'To004'),
+    ('AT1315', 'TG1688', 'BST1212', 'TP', '2024-10-15', 'absences', NULL, 10, 'To004'),
+    ('AT1316', 'TG1688', 'BST1212', 'TP', '2024-10-22', 'absences', NULL, 11, 'To004'),
+    ('AT1317', 'TG1688', 'BST1212', 'TP', '2024-10-29', 'absences', NULL, 12, 'To004'),
+    ('AT1318', 'TG1688', 'BST1212', 'TP', '2024-11-05', 'absences', NULL, 13, 'To004'),
+    ('AT1319', 'TG1688', 'BST1212', 'TP', '2024-11-12', 'absences', NULL, 14, 'To004'),
+    ('AT1320', 'TG1688', 'BST1212', 'TP', '2024-11-19', 'absences', NULL, 15, 'To004'),
+
+    ('AT1321', 'TG1688', 'BST1222', 'TP', '2024-08-14', 'absences', NULL, 1, 'To004'),
+    ('AT1322', 'TG1688', 'BST1222', 'TP', '2024-08-21', 'absences', NULL, 2, 'To004'),
+    ('AT1323', 'TG1688', 'BST1222', 'TP', '2024-08-28', 'absences', NULL, 3, 'To004'),
+    ('AT1324', 'TG1688', 'BST1222', 'TP', '2024-09-05', 'absences', NULL, 4, 'To004'),
+    ('AT1325', 'TG1688', 'BST1222', 'TP', '2024-09-12', 'absences', NULL, 5, 'To004'),
+    ('AT1326', 'TG1688', 'BST1222', 'TP', '2024-09-19', 'absences', NULL, 6, 'To004'),
+    ('AT1327', 'TG1688', 'BST1222', 'TP', '2024-09-26', 'absences', NULL, 7, 'To004'),
+    ('AT1328', 'TG1688', 'BST1222', 'TP', '2024-10-03', 'absences', NULL, 8, 'To004'),
+    ('AT1329', 'TG1688', 'BST1222', 'TP', '2024-10-10', 'absences', NULL, 9, 'To004'),
+    ('AT1330', 'TG1688', 'BST1222', 'TP', '2024-10-17', 'absences', NULL, 10, 'To004'),
+    ('AT1331', 'TG1688', 'BST1222', 'TP', '2024-10-24', 'absences', NULL, 11, 'To004'),
+    ('AT1332', 'TG1688', 'BST1222', 'TP', '2024-10-31', 'absences', NULL, 12, 'To004'),
+    ('AT1333', 'TG1688', 'BST1222', 'TP', '2024-11-07', 'absences', NULL, 13, 'To004'),
+    ('AT1334', 'TG1688', 'BST1222', 'TP', '2024-11-14', 'absences', NULL, 14, 'To004'),
+    ('AT1335', 'TG1688', 'BST1222', 'TP', '2024-11-21', 'absences', NULL, 15, 'To004');
+
+
+
+INSERT INTO attendance(attendance_id, at_student_id, at_course_code, at_course_type, date, attendance, medical_status, session_no, at_to_id)
+VALUES
+('AT1336', 'TG1688', 'BST1232', 'TP', '2024-08-14', 'absences', NULL, 1, 'To004'),
+('AT1337', 'TG1688', 'BST1232', 'TP', '2024-08-21', 'absences', NULL, 2, 'To004'),
+('AT1338', 'TG1688', 'BST1232', 'TP', '2024-08-28', 'absences', NULL, 3, 'To004'),
+('AT1339', 'TG1688', 'BST1232', 'TP', '2024-09-05', 'absences', NULL, 4, 'To004'),
+('AT1340', 'TG1688', 'BST1232', 'TP', '2024-09-12', 'absences', NULL, 5, 'To004'),
+('AT1341', 'TG1688', 'BST1232', 'TP', '2024-09-19', 'absences', NULL, 6, 'To004'),
+('AT1342', 'TG1688', 'BST1232', 'TP', '2024-09-26', 'absences', NULL, 7, 'To004'),
+('AT1343', 'TG1688', 'BST1232', 'TP', '2024-10-03', 'absences', NULL, 8, 'To004'),
+('AT1344', 'TG1688', 'BST1232', 'TP', '2024-10-10', 'absences', NULL, 9, 'To004'),
+('AT1345', 'TG1688', 'BST1232', 'TP', '2024-10-17', 'absences', NULL, 10, 'To004'),
+('AT1346', 'TG1688', 'BST1232', 'TP', '2024-10-24', 'absences', NULL, 11, 'To004'),
+('AT1347', 'TG1688', 'BST1232', 'TP', '2024-10-31', 'absences', NULL, 12, 'To004'),
+('AT1348', 'TG1688', 'BST1232', 'TP', '2024-11-07', 'absences', NULL, 13, 'To004'),
+('AT1349', 'TG1688', 'BST1232', 'TP', '2024-11-14', 'absences', NULL, 14, 'To004'),
+('AT1350', 'TG1688', 'BST1232', 'TP', '2024-11-21', 'absences', NULL, 15, 'To004'),
+
+('AT1351', 'TG1688', 'BST1242', 'TP', '2024-08-15', 'absences', NULL, 1, 'To004'),
+('AT1352', 'TG1688', 'BST1242', 'TP', '2024-08-22', 'absences', NULL, 2, 'To004'),
+('AT1353', 'TG1688', 'BST1242', 'TP', '2024-08-29', 'absences', NULL, 3, 'To004'),
+('AT1354', 'TG1688', 'BST1242', 'TP', '2024-09-06', 'absences', NULL, 4, 'To004'),
+('AT1355', 'TG1688', 'BST1242', 'TP', '2024-09-13', 'absences', NULL, 5, 'To004'),
+('AT1356', 'TG1688', 'BST1242', 'TP', '2024-09-20', 'absences', NULL, 6, 'To004'),
+('AT1357', 'TG1688', 'BST1242', 'TP', '2024-09-27', 'absences', NULL, 7, 'To004'),
+('AT1358', 'TG1688', 'BST1242', 'TP', '2024-10-04', 'absences', NULL, 8, 'To004'),
+('AT1359', 'TG1688', 'BST1242', 'TP', '2024-10-11', 'absences', NULL, 9, 'To004'),
+('AT1360', 'TG1688', 'BST1242', 'TP', '2024-10-18', 'absences', NULL, 10, 'To004'),
+('AT1361', 'TG1688', 'BST1242', 'TP', '2024-10-25', 'absences', NULL, 11, 'To004'),
+('AT1362', 'TG1688', 'BST1242', 'TP', '2024-11-01', 'absences', NULL, 12, 'To004'),
+('AT1363', 'TG1688', 'BST1242', 'TP', '2024-11-08', 'absences', NULL, 13, 'To004'),
+('AT1364', 'TG1688', 'BST1242', 'TP', '2024-11-15', 'absences', NULL, 14, 'To004'),
+('AT1365', 'TG1688', 'BST1242', 'TP', '2024-11-22', 'absences', NULL, 15, 'To004');
+
+
+
+INSERT INTO attendance(attendance_id, at_student_id, at_course_code, at_course_type, date, attendance, medical_status, session_no, at_to_id)
+VALUES
+('AT1366', 'TG1688', 'BST1251', 'T', '2024-08-15', 'absences', NULL, 1, 'To004'),
+('AT1367', 'TG1688', 'BST1251', 'T', '2024-08-22', 'absences', NULL, 2, 'To004'),
+('AT1368', 'TG1688', 'BST1251', 'T', '2024-08-29', 'absences', NULL, 3, 'To004'),
+('AT1369', 'TG1688', 'BST1251', 'T', '2024-09-06', 'absences', NULL, 4, 'To004'),
+('AT1370', 'TG1688', 'BST1251', 'T', '2024-09-13', 'absences', NULL, 5, 'To004'),
+('AT1371', 'TG1688', 'BST1251', 'T', '2024-09-20', 'absences', NULL, 6, 'To004'),
+('AT1372', 'TG1688', 'BST1251', 'T', '2024-09-27', 'absences', NULL, 7, 'To004'),
+('AT1373', 'TG1688', 'BST1251', 'T', '2024-10-04', 'absences', NULL, 8, 'To004'),
+('AT1374', 'TG1688', 'BST1251', 'T', '2024-10-27', 'absences', NULL, 9, 'To004'),
+('AT1375', 'TG1688', 'BST1251', 'T', '2024-11-03', 'absences', NULL, 10, 'To004'),
+('AT1376', 'TG1688', 'BST1251', 'T', '2024-11-10', 'absences', NULL, 11, 'To004'),
+('AT1377', 'TG1688', 'BST1251', 'T', '2024-11-17', 'absences', NULL, 12, 'To004'),
+('AT1378', 'TG1688', 'BST1251', 'T', '2024-11-24', 'absences', NULL, 13, 'To004'),
+('AT1379', 'TG1688', 'BST1251', 'T', '2024-12-01', 'absences', NULL, 14, 'To004'),
+('AT1380', 'TG1688', 'BST1251', 'T', '2024-12-08', 'absences', NULL, 15, 'To004'),
+
+('AT1381', 'TG1688', 'BST1262', 'TP', '2024-08-16', 'absences', NULL, 1, 'To004'),
+('AT1382', 'TG1688', 'BST1262', 'TP', '2024-08-23', 'absences', NULL, 2, 'To004'),
+('AT1383', 'TG1688', 'BST1262', 'TP', '2024-08-30', 'absences', NULL, 3, 'To004'),
+('AT1384', 'TG1688', 'BST1262', 'TP', '2024-09-07', 'absences', NULL, 4, 'To004'),
+('AT1385', 'TG1688', 'BST1262', 'TP', '2024-09-14', 'absences', NULL, 5, 'To004'),
+('AT1386', 'TG1688', 'BST1262', 'TP', '2024-09-21', 'absences', NULL, 6, 'To004'),
+('AT1387', 'TG1688', 'BST1262', 'TP', '2024-09-28', 'absences', NULL, 7, 'To004'),
+('AT1388', 'TG1688', 'BST1262', 'TP', '2024-10-05', 'absences', NULL, 8, 'To004'),
+('AT1389', 'TG1688', 'BST1262', 'TP', '2024-10-12', 'absences', NULL, 9, 'To004'),
+('AT1390', 'TG1688', 'BST1262', 'TP', '2024-10-19', 'absences', NULL, 10, 'To004'),
+('AT1391', 'TG1688', 'BST1262', 'TP', '2024-10-26', 'absences', NULL, 11, 'To004'),
+('AT1392', 'TG1688', 'BST1262', 'TP', '2024-11-02', 'absences', NULL, 12, 'To004'),
+('AT1393', 'TG1688', 'BST1262', 'TP', '2024-11-09', 'absences', NULL, 13, 'To004'),
+('AT1394', 'TG1688', 'BST1262', 'TP', '2024-11-16', 'absences', NULL, 14, 'To004'),
+('AT1395', 'TG1688', 'BST1262', 'TP', '2024-11-23', 'absences', NULL, 15, 'To004');
+
+
+
+INSERT INTO attendance(attendance_id, at_student_id, at_course_code, at_course_type, date, attendance, medical_status, session_no, at_to_id)
+VALUES
+('AT1396', 'TG1688', 'BST1251', 'T', '2024-08-15', 'absences', NULL, 1, 'To004'),
+('AT1397', 'TG1688', 'BST1251', 'T', '2024-08-22', 'absences', NULL, 2, 'To004'),
+('AT1398', 'TG1688', 'BST1251', 'T', '2024-08-29', 'absences', NULL, 3, 'To004'),
+('AT1399', 'TG1688', 'BST1251', 'T', '2024-09-06', 'absences', NULL, 4, 'To004'),
+('AT1400', 'TG1688', 'BST1251', 'T', '2024-09-13', 'absences', NULL, 5, 'To004'),
+('AT1401', 'TG1688', 'BST1251', 'T', '2024-09-20', 'absences', NULL, 6, 'To004'),
+('AT1402', 'TG1688', 'BST1251', 'T', '2024-09-27', 'absences', NULL, 7, 'To004'),
+('AT1403', 'TG1688', 'BST1251', 'T', '2024-10-04', 'absences', NULL, 8, 'To004'),
+('AT1404', 'TG1688', 'BST1251', 'T', '2024-10-27', 'absences', NULL, 9, 'To004'),
+('AT1405', 'TG1688', 'BST1251', 'T', '2024-11-03', 'absences', NULL, 10, 'To004'),
+('AT1406', 'TG1688', 'BST1251', 'T', '2024-11-10', 'absences', NULL, 11, 'To004'),
+('AT1407', 'TG1688', 'BST1251', 'T', '2024-11-17', 'absences', NULL, 12, 'To004'),
+('AT1408', 'TG1688', 'BST1251', 'T', '2024-11-24', 'absences', NULL, 13, 'To004'),
+('AT1409', 'TG1688', 'BST1251', 'T', '2024-12-01', 'absences', NULL, 14, 'To004'),
+('AT1410', 'TG1688', 'BST1251', 'T', '2024-12-08', 'absences', NULL, 15, 'To004'),
+
+('AT1411', 'TG1688', 'BST1262', 'TP', '2024-08-16', 'absences', NULL, 1, 'To004'),
+('AT1412', 'TG1688', 'BST1262', 'TP', '2024-08-23', 'absences', NULL, 2, 'To004'),
+('AT1413', 'TG1688', 'BST1262', 'TP', '2024-08-30', 'absences', NULL, 3, 'To004'),
+('AT1414', 'TG1688', 'BST1262', 'TP', '2024-09-07', 'absences', NULL, 4, 'To004'),
+('AT1415', 'TG1688', 'BST1262', 'TP', '2024-09-14', 'absences', NULL, 5, 'To004'),
+('AT1416', 'TG1688', 'BST1262', 'TP', '2024-09-21', 'absences', NULL, 6, 'To004'),
+('AT1417', 'TG1688', 'BST1262', 'TP', '2024-09-28', 'absences', NULL, 7, 'To004'),
+('AT1418', 'TG1688', 'BST1262', 'TP', '2024-10-05', 'absences', NULL, 8, 'To004'),
+('AT1419', 'TG1688', 'BST1262', 'TP', '2024-10-12', 'absences', NULL, 9, 'To004'),
+('AT1420', 'TG1688', 'BST1262', 'TP', '2024-10-19', 'absences', NULL, 10, 'To004'),
+('AT1421', 'TG1688', 'BST1262', 'TP', '2024-10-26', 'absences', NULL, 11, 'To004'),
+('AT1422', 'TG1688', 'BST1262', 'TP', '2024-11-02', 'absences', NULL, 12, 'To004'),
+('AT1423', 'TG1688', 'BST1262', 'TP', '2024-11-09', 'absences', NULL, 13, 'To004'),
+('AT1424', 'TG1688', 'BST1262', 'TP', '2024-11-16', 'absences', NULL, 14, 'To004'),
+('AT1425', 'TG1688', 'BST1262', 'TP', '2024-11-23', 'absences', NULL, 15, 'To004');
+
+
+INSERT INTO attendance(attendance_id, at_student_id, at_course_code, at_course_type, date, attendance, medical_status, session_no, at_to_id)
+VALUES
+('AT1426', 'TG1688', 'ENG1222', 'T', '2024-08-15', 'absences', NULL, 1, 'To005'),
+('AT1427', 'TG1688', 'ENG1222', 'T', '2024-08-22', 'absences', NULL, 2, 'To005'),
+('AT1428', 'TG1688', 'ENG1222', 'T', '2024-08-29', 'absences', NULL, 3, 'To005'),
+('AT1429', 'TG1688', 'ENG1222', 'T', '2024-09-06', 'absences', NULL, 4, 'To005'),
+('AT1430', 'TG1688', 'ENG1222', 'T', '2024-09-13', 'absences', NULL, 5, 'To005'),
+('AT1431', 'TG1688', 'ENG1222', 'T', '2024-09-20', 'absences', NULL, 6, 'To005'),
+('AT1432', 'TG1688', 'ENG1222', 'T', '2024-09-27', 'absences', NULL, 7, 'To005'),
+('AT1433', 'TG1688', 'ENG1222', 'T', '2024-10-04', 'absences', NULL, 8, 'To005'),
+('AT1434', 'TG1688', 'ENG1222', 'T', '2024-10-27', 'absences', NULL, 9, 'To005'),
+('AT1435', 'TG1688', 'ENG1222', 'T', '2024-11-03', 'absences', NULL, 10, 'To005'),
+('AT1436', 'TG1688', 'ENG1222', 'T', '2024-11-10', 'absences', NULL, 11, 'To005'),
+('AT1437', 'TG1688', 'ENG1222', 'T', '2024-11-17', 'absences', NULL, 12, 'To005'),
+('AT1438', 'TG1688', 'ENG1222', 'T', '2024-11-24', 'absences', NULL, 13, 'To005'),
+('AT1439', 'TG1688', 'ENG1222', 'T', '2024-12-01', 'absences', NULL, 14, 'To005'),
+('AT1440', 'TG1688', 'ENG1222', 'T', '2024-12-08', 'absences', NULL, 15, 'To005');
+
+
+INSERT INTO attendance(attendance_id, at_student_id, at_course_code, at_course_type, date, attendance, medical_status, session_no, at_to_id)
+VALUES
+('AT1441', 'TG1393', 'ENG1222', 'T', '2024-08-15', 'absences', NULL, 1, 'To005'),
+('AT1442', 'TG1393', 'ENG1222', 'T', '2024-08-22', 'absences', NULL, 2, 'To005'),
+('AT1443', 'TG1393', 'ENG1222', 'T', '2024-08-29', 'absences', NULL, 3, 'To005'),
+('AT1444', 'TG1393', 'ENG1222', 'T', '2024-09-06', 'absences', NULL, 4, 'To005'),
+('AT1445', 'TG1393', 'ENG1222', 'T', '2024-09-13', 'absences', NULL, 5, 'To005'),
+('AT1446', 'TG1393', 'ENG1222', 'T', '2024-09-20', 'absences', NULL, 6, 'To005'),
+('AT1447', 'TG1393', 'ENG1222', 'T', '2024-09-27', 'absences', NULL, 7, 'To005'),
+('AT1448', 'TG1393', 'ENG1222', 'T', '2024-10-04', 'absences', NULL, 8, 'To005'),
+('AT1449', 'TG1393', 'ENG1222', 'T', '2024-10-27', 'absences', NULL, 9, 'To005'),
+('AT1450', 'TG1393', 'ENG1222', 'T', '2024-11-03', 'absences', NULL, 10, 'To005'),
+('AT1451', 'TG1393', 'ENG1222', 'T', '2024-11-10', 'absences', NULL, 11, 'To005'),
+('AT1452', 'TG1393', 'ENG1222', 'T', '2024-11-17', 'absences', NULL, 12, 'To005'),
+('AT1453', 'TG1393', 'ENG1222', 'T', '2024-11-24', 'absences', NULL, 13, 'To005'),
+('AT1454', 'TG1393', 'ENG1222', 'T', '2024-12-01', 'absences', NULL, 14, 'To005'),
+('AT1455', 'TG1393', 'ENG1222', 'T', '2024-12-08', 'absences', NULL, 15, 'To005');
+
+
+INSERT INTO attendance(attendance_id, at_student_id, at_course_code, at_course_type, date, attendance, medical_status, session_no, at_to_id)
+VALUES
+('AT1456', 'TG1393', 'TCS1212', 'T', '2024-08-15', 'absences', NULL, 1, 'To005'),
+('AT1457', 'TG1393', 'TCS1212', 'T', '2024-08-22', 'absences', NULL, 2, 'To005'),
+('AT1458', 'TG1393', 'TCS1212', 'T', '2024-08-29', 'absences', NULL, 3, 'To005'),
+('AT1459', 'TG1393', 'TCS1212', 'T', '2024-09-06', 'absences', NULL, 4, 'To005'),
+('AT1460', 'TG1393', 'TCS1212', 'T', '2024-09-13', 'absences', NULL, 5, 'To005'),
+('AT1461', 'TG1393', 'TCS1212', 'T', '2024-09-20', 'absences', NULL, 6, 'To005'),
+('AT1462', 'TG1393', 'TCS1212', 'T', '2024-09-27', 'absences', NULL, 7, 'To005'),
+('AT1463', 'TG1393', 'TCS1212', 'T', '2024-10-04', 'absences', NULL, 8, 'To005'),
+('AT1464', 'TG1393', 'TCS1212', 'T', '2024-10-27', 'absences', NULL, 9, 'To005'),
+('AT1465', 'TG1393', 'TCS1212', 'T', '2024-11-03', 'absences', NULL, 10, 'To005'),
+('AT1466', 'TG1393', 'TCS1212', 'T', '2024-11-10', 'absences', NULL, 11, 'To005'),
+('AT1467', 'TG1393', 'TCS1212', 'T', '2024-11-17', 'absences', NULL, 12, 'To005'),
+('AT1468', 'TG1393', 'TCS1212', 'T', '2024-11-24', 'absences', NULL, 13, 'To005'),
+('AT1469', 'TG1393', 'TCS1212', 'T', '2024-12-01', 'absences', NULL, 14, 'To005'),
+('AT1470', 'TG1393', 'TCS1212', 'T', '2024-12-08', 'absences', NULL, 15, 'To005');
+
+
+
+INSERT INTO attendance(attendance_id, at_student_id, at_course_code, at_course_type, date, attendance, medical_status, session_no, at_to_id)
+VALUES
+('AT1471', 'TG1688', 'TCS1212', 'T', '2024-08-15', 'absences', NULL, 1, 'To005'),
+('AT1472', 'TG1688', 'TCS1212', 'T', '2024-08-22', 'absences', NULL, 2, 'To005'),
+('AT1473', 'TG1688', 'TCS1212', 'T', '2024-08-29', 'absences', NULL, 3, 'To005'),
+('AT1474', 'TG1688', 'TCS1212', 'T', '2024-09-06', 'absences', NULL, 4, 'To005'),
+('AT1475', 'TG1688', 'TCS1212', 'T', '2024-09-13', 'absences', NULL, 5, 'To005'),
+('AT1476', 'TG1688', 'TCS1212', 'T', '2024-09-20', 'absences', NULL, 6, 'To005'),
+('AT1477', 'TG1688', 'TCS1212', 'T', '2024-09-27', 'absences', NULL, 7, 'To005'),
+('AT1478', 'TG1688', 'TCS1212', 'T', '2024-10-04', 'absences', NULL, 8, 'To005'),
+('AT1479', 'TG1688', 'TCS1212', 'T', '2024-10-27', 'absences', NULL, 9, 'To005'),
+('AT1480', 'TG1688', 'TCS1212', 'T', '2024-11-03', 'absences', NULL, 10, 'To005'),
+('AT1481', 'TG1688', 'TCS1212', 'T', '2024-11-10', 'absences', NULL, 11, 'To005'),
+('AT1482', 'TG1688', 'TCS1212', 'T', '2024-11-17', 'absences', NULL, 12, 'To005'),
+('AT1483', 'TG1688', 'TCS1212', 'T', '2024-11-24', 'absences', NULL, 13, 'To005'),
+('AT1484', 'TG1688', 'TCS1212', 'T', '2024-12-01', 'absences', NULL, 14, 'To005'),
+('AT1485', 'TG1688', 'TCS1212', 'T', '2024-12-08', 'absences', NULL, 15, 'To005');
+
+
 
 INSERT INTO marks (student_id, course_code, Q1, Q2, Q3, assessment_mark, mid_exam_theory, mid_exam_practical, final_exam_theory, final_exam_practical)
  VALUES
