@@ -84,3 +84,5 @@ FROM
      GROUP BY s.student_id) AS grades_summary
 JOIN student st ON grades_summary.student_id = st.student_id
 JOIN user u ON u.u_nic = st.st_nic;
+
+select * from sgpa;
