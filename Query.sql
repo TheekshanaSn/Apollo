@@ -51,40 +51,36 @@ CALL check_quize_marks('TG1444');
 
 
 --------------Student SGPA -----------------
-CREATE VIEW Student_SGPA AS
-SELECT 
-    student_id,
-    CASE 
-        WHEN total_credits > 0 THEN ROUND(total_grade_points / total_credits, 5)
-        ELSE 0.00000
-    END AS SGPA
-FROM 
-    (SELECT 
+CREATE VIEW sgpa AS
+SELECT
+    CONCAT(u.f_name, " ", u.l_name) AS "FULL NAME",
+    grades_summary.student_id,
+    (grades_summary.total_grade_points / NULLIF(grades_summary.total_credits, 0)) AS sgpa
+FROM
+    (SELECT
         s.student_id,
-        SUM(CASE 
-                WHEN s.grade = 'A+' THEN 4.0
-                WHEN s.grade = 'A' THEN 4.0
-                WHEN s.grade = 'A-' THEN 3.7
-                WHEN s.grade = 'B+' THEN 3.3
-                WHEN s.grade = 'B' THEN 3.0
-                WHEN s.grade = 'B-' THEN 2.7
-                WHEN s.grade = 'C+' THEN 2.3
-                WHEN s.grade = 'C' THEN 2.0
-                WHEN s.grade = 'C-' THEN 1.7
-                WHEN s.grade = 'D+' THEN 1.3
-                WHEN s.grade = 'D' THEN 1.0
-                WHEN s.grade = 'E' THEN 0.7
-                WHEN s.grade = 'E*' THEN 0.5
-                WHEN s.grade = 'F' THEN 0.0
+        SUM(CASE
+                WHEN s.grade = 'A+' THEN c.credit * 4.0
+                WHEN s.grade = 'A' THEN c.credit * 4.0
+                WHEN s.grade = 'A-' THEN c.credit * 3.7
+                WHEN s.grade = 'B+' THEN c.credit * 3.3
+                WHEN s.grade = 'B' THEN c.credit * 3.0
+                WHEN s.grade = 'B-' THEN c.credit * 2.7
+                WHEN s.grade = 'C+' THEN c.credit * 2.3
+                WHEN s.grade = 'C' THEN c.credit * 2.0
+                WHEN s.grade = 'C-' THEN c.credit * 1.7
+                WHEN s.grade = 'D+' THEN c.credit * 1.3
+                WHEN s.grade = 'D' THEN c.credit * 1.0
+                WHEN s.grade = 'E' THEN c.credit * 0.7
+                WHEN s.grade = 'E*' THEN c.credit * 0.5
+                WHEN s.grade = 'F' THEN c.credit * 0.0
                 ELSE 0
             END) AS total_grade_points,
-        COUNT(s.course_code) AS total_credits
-     FROM 
+        SUM(c.credit) AS total_credits
+     FROM
         student_final_grades3 s
-     WHERE 
-        s.course_code != 'ENG1222'  -- Exclude the specified course
-     GROUP BY 
-        s.student_id) AS grades_summary;
-
-
-select * from Student_SGPA;
+     JOIN course_unit c ON s.course_code = c.course_code
+     
+     GROUP BY s.student_id) AS grades_summary
+JOIN student st ON grades_summary.student_id = st.student_id
+JOIN user u ON u.u_nic = st.st_nic;
