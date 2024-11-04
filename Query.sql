@@ -78,7 +78,7 @@ FROM
             END) AS total_grade_points,
         SUM(c.credit) AS total_credits
      FROM
-        student_final_grades3 s
+        student_final_grades s
      JOIN course_unit c ON s.course_code = c.course_code
      
      GROUP BY s.student_id) AS grades_summary
