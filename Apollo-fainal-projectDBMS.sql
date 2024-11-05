@@ -2385,6 +2385,7 @@ CALL student_course('TG1376');
 
 
 
+
 -----------Lecture details--------------
 
 CREATE VIEW lecture_detail AS
@@ -2437,7 +2438,19 @@ DELIMITER ;
 
 CALL check_quize_marks('TG1444');
 
+-- student_age
 
+DELIMITER //
+CREATE PROCEDURE st_age(IN st_id VARCHAR(10))
+BEGIN
+	SELECT student_id,
+	year(curdate()) - year(dob) AS Age
+	FROM student
+	WHERE student_id = st_id;
+END //
+DELIMITER ;
+
+call st_age('TG1444');
 
 
 
