@@ -87,7 +87,7 @@ JOIN user u ON u.u_nic = st.st_nic;
 
 select * from sgpa;
 
---------------student Birthday---------------------
+--------------student Age---------------------
 DELIMITER //
 CREATE PROCEDURE st_age(IN st_id VARCHAR(10))
 BEGIN
