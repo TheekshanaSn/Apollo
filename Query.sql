@@ -86,3 +86,16 @@ JOIN student st ON grades_summary.student_id = st.student_id
 JOIN user u ON u.u_nic = st.st_nic;
 
 select * from sgpa;
+
+--------------student Birthday---------------------
+DELIMITER //
+CREATE PROCEDURE st_age(IN st_id VARCHAR(10))
+BEGIN
+	SELECT student_id,
+	year(curdate()) - year(dob) AS Age
+	FROM student
+	WHERE student_id = st_id;
+END //
+DELIMITER ;
+
+call st_age('TG1444');
